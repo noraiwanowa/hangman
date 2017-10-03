@@ -1,0 +1,11 @@
+<div class="row">
+    <div class="col-md-offset-4 col-md-5">
+        <select id="selectCategory">
+            <option>Избери..</option>
+            <?php /** @var  $catetegory \Application\Entity\Categories */ ?>
+            <?php foreach ($categories as $catetegory) :?>
+                <option value="<?= $catetegory->getId(); ?>"><?= $catetegory->getCategory(); ?></option>
+            <?php endforeach; ?>
+        </select>
+    </div>
+</div>

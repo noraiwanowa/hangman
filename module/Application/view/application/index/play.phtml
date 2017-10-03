@@ -1,0 +1,21 @@
+<div class="row">
+    <div class="col-md-offset-4 col-md-5">
+        <?= $selectedWord['description']; ?>
+        <br />
+        <span id="wholeWord">
+            <?php foreach ($preparedWordArray as $key => $letter) : ?>
+                <span id="letter<?= $key; ?>"><?= $letter; ?></span>
+            <?php endforeach; ?>
+        </span>
+        <br />
+        <input type="radio" name="inputType" value="letter" id="inputTypeLetter" checked> <label for="inputTypeLetter">Буква</label>
+        <input type="radio" name="inputType" value="word" id="inputTypeWord"> <label for="inputTypeWord">Дума</label>
+        <input type="text" id="letter"><br />
+
+        Използвани Букви: <span id="usedLetters"><?= $usedLetters; ?></span>
+
+        <br /><br>
+        <img src="/img/error1.png" class="hidden" id="showError"/>
+    </div>
+</div>
+
